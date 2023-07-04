@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <meta name="description" content="">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="node_modules/bootstrap/dist/css/bootstrap.min.js"></script>
+
+    
+</head>
+<body>
+  <div id="overlay"></div>
+
+<div id="cookie-popup">
+  <h2>Acest website foloseste cookies</h2>
+  <p>Folosim cookies pentru a-ti imbunatati experienta. Continuand navigarea pe acest site, iti dai acordul pentru utilizarea cookie-urilor.</p>
+  <button id="consent-button">Am inteles!</button>
+</div>
+
+   
+<div id="content">
+  <a href="#" id="back-to-top" title="Back to Top">&uarr;</a>
+  <section data-bs-version="5.1" class="menu" id="menu-1">
+    <h2 class="visually-hidden">Menu Section</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <span class="navbar-logo">
+        <a href="index.html">
+          <img src="icon.png" alt="Sapphire Plate" style="height: 3.8rem;" class="mx-4">
+        </a>
+      </span>
+      <a class="navbar-brand" href="#">Sapphire Plate</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav list-unstyled">
+          <li class="nav-item">
+            <a class="nav-link" href="#section-2" onclick="scrollToSection('section-2')">Despre noi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section" onclick="scrollToSection('menu')">Meniu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rezervari" onclick="scrollToSection('reserv')">Rezerva</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link cart-icon">
+              <i class="fa fa-shopping-cart"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+</div>
+
+
+   <section data-bs-version="5.1" class="header" id="header-1">
+    <div class="jumbotron jumbotron-fluid text-center position-relative">
+      <img src="header.jpg" style="width: 100%;" alt="Header Image" class="img-fluid">
+      <div class="header-text position-absolute top-0 start-0 end-0 bottom-0 d-flex flex-column justify-content-center">
+        <h1 class="display-4 text-white fw-bold shadow-xxl">O experienta de neuitat</h1>
+        <p class="lead text-white fs-4 shadow-xxl">Everyone can taste the luxury</p>   
+      </div>
+    </div>
+  </section>
+  <div id="cart-panel" class="cart-panel" style="z-index:1000">
+    <div id="cart-container" class="cart-container"></div>
+    <div class="cart-footer">
+      <p>Total: <span id="cart-total"></span></p>
+      <div class="cart-buttons">
+        <button id="continue-shopping-btn" class="btn btn-secondary">Inchide cosul</button>
+        <button id="finish-order-btn" class="btn btn-primary">Finalizeaza comanda</button>
+      </div>
+  </div>
+  </div>
+  
+  <section data-bs-version="5.1" class="section" id="section-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="display-6 fw-bold pt-5">Despre Sapphire</h2>
+                <p class="lead p-3 pb-0" style="font-weight: 400;">Conceptul a luat nastere cand, la o simpla cercetare a pietei, s-a observat ca oferta de restaurante sau localuri care ofera experiente premium la preturi pe care orice om de statut mediu si le-ar permite este una redusa. </p>
+                <p class="lead p-3 pt-0 pb-0" style="font-weight: 400;" > Astfel, a aparut ideea de a crea un loc unde oamenii sa se simta rasfatati si sa aiba parte de o experienta culinara de calitate superioara, dar fara a plati preturi exorbitante. Restaurantul nostru isi propune sa ofere o experienta completa, in care gustul extraordinar al mancarii sa fie completat de o atmosfera placuta si un serviciu impecabil.</p>
+                <p class="lead p-3 pt-0 pb-0"  style="font-weight:400;">De la  designul elegant si confortabil al spatiului, pana la selectia atenta a ingredientelor si la calitatea ireprosabila a serviciilor noastre, am facut tot posibilul pentru a va oferi o experienta culinara surprinzatoare.</p>
+                <p class="lead p-3 pt-0 pb-5" style="font-weight:400;">Asa a luat nastere conceptul Sapphire, unde calitatea si luxul sunt la indemana tuturor.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features">
+    <div class="features-container">
+      <div class="row">
+        <div class="col-md-12"> 
+          <h2 class="display-6 fw-bold pt-5 text-center" >Ce ne diferentiaza de concurenta?</h2>
+        </div>
+      </div>
+      <div class="row" id="feature-cards">
+      </div>
+    </div>
+  </section>
+
+  <section class="founderss" id="founders">
+    <div class="row">
+      <div class="col-md-12"> 
+        <h2 class="display-6 fw-bold pt-5 text-center" >Fondatoarele conceptului</h2>
+      </div>
+    </div>
+    <div id="founders-container"></div>
+  </section>
+  
+
+
+  <section class="offer" >
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="display-6 fw-bold pt-5 text-center" >Ce oferim?</h2>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-xl-row justify-content-center align-items-center container gap-5">
+      <div class="carousel" style="max-width: 100%;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-width: 100%;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="bg-dine1"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="bg-dine2"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="bg-dine3"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="bg-dine5"></div>
+            </div>
+            <div class="carousel-item">
+              <div class="bg-dine6"></div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+       </div> 
+       <div>
+        <p class="p1">Cu siguranță, doriți să vă bucurați de o experiență culinară sofisticată într-un cadru elegant, dar fără să plătiți o avere. Restaurantul nostru îndeplinește toate aceste cerințe, oferind un meniu rafinat la prețuri modice. De la aperitive, feluri principale, până la deserturi, fiecare mâncare este preparată cu atenție la detalii și cu ingrediente proaspete de cea mai bună calitate.</p>
+    
+        <p class="p2">Pentru început, vă putem oferi o varietate de aperitive, cum ar fi bruschete, fructe de mare proaspete și salate proaspete și colorate, perfecte pentru a încheia ziua sau a începe o cină delicioasă. Felurile principale sunt diverse și rafinate, de la paste cu fructe de mare la file de pește proaspăt și preparate vegetariene sofisticate. În plus, meniul nostru include și delicii preparate la grătar, cum ar fi carne de vită și de pui, cu opțiuni sănătoase și savuroase.</p>
+    
+       </div>
+
+    </div>
+    
+  </section>
+
+
+  <section class="meniu" id="menu">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="display-6 fw-bold pt-5 text-center" >Meniu</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" id="menuItemsRow">
+      </div>
+    </div>    
+  </section>
+
+<section class="recenzii" id="recenzie">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="display-6 fw-bold pt-5 text-center" >Clienti multumiti</h2>
+    </div>
+  </div>
+  <div  class="rec" id="reviews-carousel"></div>
+</section>
+
+<section class="grafic" id="grafic">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="display-6 fw-bold pt-5 text-center">Crestem impreuna </h2>
+    </div>
+  </div>
+  <div class="chart-container d-flex justify-content-center align-items-center">
+    <canvas id="myChart"></canvas>
+  </div>
+</section>
+
+
+
+
+
+
+  
+  <section class="rezervari" id="reserv">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="display-6 fw-bold pt-5 text-center" >Rezerva acum:</h2>
+      </div>
+    </div>
+    <div class="res-form" style="width: 50%; margin: 0 auto;">
+    <form id="reservation-form">
+      <div class="form-group">
+        <label for="name">Nume si Prenume:</label>
+        <input type="text" class="form-control" id="name" name="name" required pattern="[A-Za-z\s]+">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      </div>
+      <div class="form-group">
+        <label for="phone">Numar de telefon:</label>
+        <input type="tel" class="form-control" id="phone" name="phone"  required pattern="[0-9]{10}">
+      </div>
+      <div class="form-group">
+        <label for="date">Data:</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Ora:</label>
+        <input type="time" class="form-control" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="party-size">Persoane:</label>
+        <input type="number" class="form-control" id="party-size" name="party-size" min="1" max="10" required>
+      </div>
+      <div id="button-container" style="text-align: center;">
+        <button type="submit" class="btn btn-primary " style="margin-top: 30px;">Confirmati</button>
+      </div>
+    </form>
+    </div>
+    
+  </section>
+  
+  <div class="map-section">
+    <svg width="800" height="500" viewBox="0 0 800 500">
+      <image href="map.png" width="100%" height="100%" />
+      <line x1="50" y1="150" x2="450" y2="150" stroke="#808080" stroke-width="2" stroke-dasharray="4" />
+      <line x1="250" y1="50" x2="250" y2="250" stroke="#808080" stroke-width="2" stroke-dasharray="4" />
+      <circle cx="250" cy="150" r="6" fill="#FF0000" />
+      <text x="260" y="155" font-family="Arial, sans-serif" font-size="14" fill="#000000" font-weight="bold">Sapphire Plate</text>
+      <circle cx="220" cy="115" r="4" fill="#0000FF" />
+      <circle cx="525" cy="165" r="4" fill="#800080" />    
+      <circle cx="300" cy="275" r="4" fill="#0000FF" /> 
+      <circle cx="147" cy="345" r="4" fill="#000000" />       
+    </svg>
+  
+    <p class="contact-info">Tel: +40 710 968 964</p>
+  </div>
+ 
+  <footer style="background-color: rgb(43, 40, 40); color: white; padding: 10px;">
+    <div style="text-align: center;">
+       <p>Sapphire Plate</p>
+       <p>&copy; 2023 Toate drepturile rezervate.</p>
+    </div>
+ </footer>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="features.js"></script>
+ 
+</body>
+</html>

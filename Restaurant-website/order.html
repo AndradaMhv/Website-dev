@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizare comanda</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12"> 
+          <h2 class="display-6 fw-bold pt-5 text-center" >Finalizati comanda</h2>
+        </div>
+      </div>
+      <div class="formular-order" style="width: 50%; margin: 0 auto;">
+        <form id="order-form" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nume si Prenume:</label>
+              <input type="text" id="name" name="name" class="form-control" required pattern="[A-Za-z\s]+">
+              <div class="invalid-feedback">Va rugam introduceti-va numele.</div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="phone" class="form-label">Numar de telefon:</label>
+              <input type="tel" id="phone" name="phone" class="form-control"  required pattern="[0-9]{10}">
+              <div class="invalid-feedback">Va rugam introduceti-va numarul de telefon.</div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+              <div class="invalid-feedback">Va rugam introduceti-va adresa de e-mail.</div>
+            </div>
+          
+            <div class="mb-3">
+              <label for="address" class="form-label">Adresa:</label>
+              <textarea id="address" name="address" class="form-control" rows="4" required></textarea>
+              <div class="invalid-feedback">Va rugam introduceti-va adresa.</div>
+            </div>
+          <div class="button-container" style="text-align:center">
+            <button type="submit" class="btn btn-primary">Plasati comanda</button></div>
+          </form>
+      </div>
+    
+      <script src="order.js"></script>
+    
+</body>
+</html>
